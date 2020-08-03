@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>investigations about change</title>
+  <style>
+    /*     @font-face {
+      font-family: Graphik;
+      src: url(Fonts/GraphikRegular.woff) format("woff");
+    }
+
+    @font-face {
+      font-family: GraphikMedium;
+      src: url(Fonts/GraphikMedium.woff) format("woff");
+    }
+
+    @font-face {
+      font-family: GraphikBold;
+      src: url(Fonts/GraphikBold.woff) format("woff");
+    }
+ */
+
+    .banner {
+      background-image: url("https://images.unsplash.com/photo-1512772452758-275f069da6bf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
+      filter: rgba(0, 0, 0, 1);
+      background-size: cover;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100vh;
+    }
+
+    .banner-opacity {
+      background: linear-gradient(90deg, rgba(2, 0, 36, 0.25) 0%, rgba(0, 90, 88, 0.25) 35%, rgba(0, 212, 255, 0.25) 100%);
+      height: 100%;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    h3 {
+      font-family: 'Rubik', sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+      margin: 22px 20px 20px 20px;
+      font-weight: bolder;
+      color: white;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .header button {
+      background-color: transparent;
+      font-family: 'Rubik', sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      color: white;
+      border-color: transparent;
+      margin: 18px;
+      transition: 200ms all ease-in-out;
+      padding-bottom: 2px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0);
+    }
+
+    .header button:hover {
+      border-bottom-color: white;
+    }
+
+    hr {
+      color: white;
+    }
+
+    .cover {
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Rubik', sans-serif;
+      font-weight: 700;
+      font-size: 54px;
+      color: white;
+      text-shadow: 2px 2px rgba(0, 0, 0, 0.4);
+      margin: 250px 0px 20px 0px;
+    }
+
+    h1>span {
+      color: tomato;
+    }
+
+    h2 {
+      font-family: 'Rubik', sans-serif;
+      font-weight: 400;
+      font-size: 24px;
+      color: white;
+      margin: 0px auto;
+      line-height: 1.5;
+      text-shadow: 2px 2px rgba(0, 0, 0, 0.4);
+      letter-spacing: 3px;
+    }
+
+    .opinion {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .opinion>button {
+      font-family: 'Rubik', sans-serif;
+      font-weight: 500;
+      background-color: rgba(255, 255, 255, 0.8);
+      font-size: 14px;
+      border: 1px solid white;
+      padding: 20px 30px;
+      border-radius: 15px;
+      margin-top: 100px;
+      box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .opinion>button:hover {
+      background-color: transparent;
+      color: white;
+    }
+
+    .content {
+      background-color: #005a58;
+      background-size: cover;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .title {
+      text-align: center;
+      margin: 0px;
+      border: 1px solid white;
+      width: 100vw;
+      padding: 20px 0;
+    }
+
+    .boxes {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100vw;
+    }
+
+    .themes {
+      width: 33%;
+      border: 1px solid white;
+      flex-wrap: wrap;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .themes h1 {
+      margin: 40px 40px 20px 40px;
+    }
+
+    .themes h2 {
+      margin: 0 40px 40px 40px;
+    }
+
+    p {
+      margin: 0 40px 20px 40px;
+      font-family: 'Rubik', sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      color: white;
+      line-height: 1.5;
+      text-align: justify;
+    }
+
+    a {
+      font-family: 'Rubik', sans-serif;
+      font-weight: 500;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 200ms all ease-in-out;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    h4 {
+      font-family: 'Rubik', sans-serif;
+      font-weight: 500;
+      color: rgb(187, 187, 187);
+      font-size: 18px;
+      margin: 2px;
+    }
+
+    .themes-footer {
+      padding: 20px;
+      justify-items: end;
+      text-align: center;
+    }
+
+    footer {
+      letter-spacing: 2px;
+      text-align: center;
+      font-family: Graphik;
+      color: white;
+      background-color: #013b3a;
+      padding: 24px;
+    }
+
+    @media only screen and (max-width: 900px) {
+      .themes {
+        width: 50%;
+      }
+
+      h1 {
+        font-size: 44px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+    }
+
+    @media only screen and (max-width: 564px) {
+      .themes {
+        width: 100%;
+      }
+
+      h1 {
+        margin-top: 200px;
+        font-size: 40px;
+      }
+
+      .header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+<body>
+  <div class="banner">
+    <div class="banner-opacity">
+      <div class="header">
+        <h3>Investigations about change</h3>
+        <button>
+          contact us 🤸‍♀️
+        </button>
+      </div>
+      <hr />
+      <div class="cover">
+        <h1>
+          How you feel about change?
+        </h1>
+        <h2>
+          Set of essays written each morning,</br> reflecting on
+          the difficulty of changing
+        </h2>
+        <div class="opinion">
+          <button>
+            Tell us your opinion 🐠
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <h2>ESSAYS</h2>
+    </div>
+    <div class="boxes">
+      <div class="themes">
+        <div class="themes-header">
+          <h1>1</h1>
+          <h2>About Freedom</h2>
+        </div>
+        <p>
+          "But when I think about it, immediately, without rationalizing too
+          much, I don't think about effort, work, routine or repetition. I
+          don't think about perseverance, or resilience, or sweat. I think of
+          spontaneous instead of manufactured. I think of floating instead of
+          acting. I think of verbs like sliding, leaving, running, flying. I
+          think of abandoning myself instead of building myself. And that may
+          be a mistake.
+          <span style="font-family: GraphikBold;">When I think of freedom, I'm very likely to mistake it for
+            escape."</span>
+        </p>
+        <div class="themes-footer"><a href="https://medium.com/@ritamedina27/nadar-a-pensar-em-ser-livre-93d6bfdca4f5"
+            target=_blank>
+            read here! 🎈</a></div>
+      </div>
+      <div class="themes">
+        <div class="themes-header">
+          <h1>2</h1>
+          <h2>About Resilience</h2>
+        </div>
+
+        <p>
+          ""It occurred to me that what we did in the mountains has a lot to
+          do with force. What we do on a daily basis too, but that's what I
+          call resist. What is this ability to withstand this level of
+          dissatisfaction that doesn't sink me too much. That prevents forces
+          unfavorable causes me to disintegrate completely, but only that. IS
+          a movement against. A resistance, a barrier body, that doesn't
+          moves, nor changes, because you are afraid to move something
+          deconstruct everything else.""
+        </p>
+        <div class="themes-footer">
+          <h4>In constrution</h4>
+        </div>
+      </div>
+      <div class="themes">
+        <div class="themes-header">
+          <h1>3</h1>
+          <h2>About Vulnerability</h2>
+        </div>
+        <p>
+          George Orwell said: "I write because there is a lie that I want to
+          denounce". Here's mine. And so I started writing again, and praying
+          (in this new faith that was trying to make me grow), and telling my
+          story to others, hoping to receive others that could help. We cannot
+          expect others to talk about their vulnerabilities without giving
+          ours for the exchange. It would be impolite.
+        </p>
+        <div class="themes-footer">
+          <h4>In constrution</h4>
+        </div>
+      </div>
+      <div class="themes">
+        <div class="themes-header">
+          <h1>4</h1>
+          <h2>About Waiting</h2>
+        </div>
+        <p>
+          "I always have the impression of waiting. Something I don't know
+          what is, or when it started. I am increasingly convinced that the
+          sense of waiting was born with me. Sometimes that waiting takes on
+          an object. It can be a love, or a certain capacity that I need to
+          learn, or specific day that I need to arrive."
+        </p>
+        <div class="themes-footer">
+          <h4>In constrution</h4>
+        </div>
+      </div>
+      <div class="themes">
+        <div class="themes-header">
+          <h1>5</h1>
+          <h2>About Flexibility</h2>
+        </div>
+        <p>
+          "The truth is, I still didn't know what it was like to be resilient.
+          I call it something else, because it seems to me that it is a
+          different capacity than resistance. One is no longer keeps going and
+          letting go. One remakes the body and the head at each obstacle. One
+          already he does not try to remain the same, that same whole. One
+          becomes another, for come out more whole. One no longer thinks if it
+          will last until the end, because by the end it will have I gain
+          different abilities that I could not suspect at first."
+        </p>
+        <div class="themes-footer">
+          <h4>In constrution</h4>
+        </div>
+      </div>
+      <div class="themes">
+        <div class="themes-header">
+          <h1>6</h1>
+          <h2>About Focus</h2>
+        </div>
+        <p>
+          "When I meditate I usually imagine that in my belly there is another
+          rita, smaller, looser, calmer, always sitting straighter than I
+          would be able to. This rita follows the breath regardless of what is
+          going on around her. She is enveloped in a bubble of energy that
+          protects her from everything, and that makes her never tired. It
+          exists only to breathe. For her, everything exists on a different
+          plane, away from her, alien to her. She realizes everything, and is
+          not involved in anything. It is very likely a stoic."
+        </p>
+        <div class="themes-footer">
+          <h4>In constrution</h4>
+        </div>
+      </div>
+    </div>
+    <footer>Made by <a href="https://www.behance.net/ritavazmedina" target=_blank>Rita</a> 👩‍💻</footer>
+  </div>
+</body>
+
+</html>
+<script>
+  function email() {
+    let contacts = alert("Thanks for getting in touch 🦚  Our email is ritamedina27@gmail.com")
+  }
+  let contactButton = document.querySelector("button");
+
+  contactButton.addEventListener("click", email);
+
+  function opinion() {
+    let name = prompt("What is your name?")
+    let definition = prompt(`Hi ${name}, how would you define change in one word?`)
+
+    if (
+      definition.length > 1 &&
+      definition.split(' ').length < 2 &&
+      !hasNumber(definition)) {
+      let header = document.querySelector("h1")
+      header.innerHTML = "Why is change so <span><strong>" + definition + "</strong></span> ?"
+    } else {
+      alert("Please try again 😪")
+    }
+  }
+
+  function hasNumber(string) {
+    return /\d/.test(string);
+
+  }
+
+  let opinionButton = document.querySelector(".opinion");
+
+  opinionButton.addEventListener("click", opinion);
+
+</script>
